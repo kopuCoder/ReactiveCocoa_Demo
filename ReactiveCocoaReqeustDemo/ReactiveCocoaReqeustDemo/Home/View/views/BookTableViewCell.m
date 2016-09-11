@@ -38,7 +38,7 @@ NSString * const BookTableViewCellCellID = @"BookTableViewCell";
     _book = book;
     [self.iconImageView setImageWithURL:[NSURL URLWithString:book.image]];
     self.bookNameLable.text = book.title;
-    self.descLable.text = book.summary;
+    self.descLable.text = book.summary.length>0?book.summary:@"暂无简介。。。。。";
     self.priceLable.text = book.price;
     
 }

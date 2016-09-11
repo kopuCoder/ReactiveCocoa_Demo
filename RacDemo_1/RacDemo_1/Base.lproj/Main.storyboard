@@ -50,15 +50,21 @@
                                 </constraints>
                                 <state key="normal" title="测试代理"/>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HNV-wX-6QS">
-                                <rect key="frame" x="225" y="322" width="150" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="测试RAC代替TextFiled代理开发" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HNV-wX-6QS">
+                                <rect key="frame" x="180" y="322" width="240" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Jod-jf-wXl"/>
-                                    <constraint firstAttribute="width" constant="150" id="PSZ-SH-Z00"/>
+                                    <constraint firstAttribute="width" constant="240" id="PSZ-SH-Z00"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Jb-OJ-YJk">
+                                <rect key="frame" x="0.0" y="382" width="600" height="218"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -66,13 +72,18 @@
                             <constraint firstItem="HNV-wX-6QS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2d5-2x-rbv"/>
                             <constraint firstItem="vpO-FF-6Sz" firstAttribute="top" secondItem="I2e-64-lke" secondAttribute="bottom" constant="44" id="8UH-8y-M9M"/>
                             <constraint firstItem="I2e-64-lke" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9bs-z0-wXP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5Jb-OJ-YJk" secondAttribute="bottom" id="Cfx-Wd-sat"/>
+                            <constraint firstItem="5Jb-OJ-YJk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DBA-X8-zra"/>
                             <constraint firstItem="vpO-FF-6Sz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JnC-Vr-cHe"/>
+                            <constraint firstAttribute="trailing" secondItem="5Jb-OJ-YJk" secondAttribute="trailing" id="Wfm-Xk-LDk"/>
                             <constraint firstAttribute="trailing" secondItem="I2e-64-lke" secondAttribute="trailing" id="dRc-4P-3xV"/>
+                            <constraint firstItem="5Jb-OJ-YJk" firstAttribute="top" secondItem="HNV-wX-6QS" secondAttribute="bottom" constant="30" id="qBi-UV-zN3"/>
                             <constraint firstItem="I2e-64-lke" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="quu-eN-fGX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rj7-zp-XhH"/>
                     <connections>
+                        <outlet property="bottomContentLable" destination="5Jb-OJ-YJk" id="Ajt-iT-85E"/>
                         <outlet property="protocalLable" destination="I2e-64-lke" id="yDS-Dt-U8a"/>
                         <outlet property="testProtocalBtn" destination="vpO-FF-6Sz" id="frY-K5-RZk"/>
                         <outlet property="textFiled" destination="HNV-wX-6QS" id="6pr-1z-kxk"/>

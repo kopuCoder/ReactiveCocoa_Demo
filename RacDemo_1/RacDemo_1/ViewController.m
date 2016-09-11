@@ -26,6 +26,9 @@
 @property (nonatomic,strong)RACSignal * uploadSiganl1;
 @property (nonatomic,strong)RACSignal * uploadSiganl2;
 
+
+@property (weak, nonatomic) IBOutlet UILabel *bottomContentLable;
+
 @end
 
 @implementation ViewController
@@ -142,6 +145,7 @@
     [self.textFiled.rac_textSignal subscribeNext:^(id x) {
         NSLog(@"输入信息:%@",x);
     }];
+    RAC(self.bottomContentLable,text) = self.textFiled.rac_textSignal;
     
     //6.处理当界面有多次请求时，需要都获取到数据时，才能展示界面
     [self simulationRequest];
