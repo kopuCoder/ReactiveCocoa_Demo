@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nEO-db-rRX">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="fnT-NI-gIb">
+            <objects>
+                <navigationController id="nEO-db-rRX" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4px-Pn-EcY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vHS-TQ-oPb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0gb-hU-MCq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="205" y="-586"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="等待二级页面结果" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2e-64-lke">
+                                <rect key="frame" x="0.0" y="84" width="600" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Oxg-iQ-tgP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.30810844365198164" green="0.81630706636859929" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpO-FF-6Sz">
+                                <rect key="frame" x="207" y="228" width="187" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="187" id="0QU-OV-zA4"/>
+                                    <constraint firstAttribute="height" constant="72" id="d2x-uh-WJO"/>
+                                </constraints>
+                                <state key="normal" title="测试代理"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HNV-wX-6QS">
+                                <rect key="frame" x="225" y="322" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Jod-jf-wXl"/>
+                                    <constraint firstAttribute="width" constant="150" id="PSZ-SH-Z00"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HNV-wX-6QS" firstAttribute="top" secondItem="vpO-FF-6Sz" secondAttribute="bottom" constant="22" id="1Bu-Ht-pFO"/>
+                            <constraint firstItem="HNV-wX-6QS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2d5-2x-rbv"/>
+                            <constraint firstItem="vpO-FF-6Sz" firstAttribute="top" secondItem="I2e-64-lke" secondAttribute="bottom" constant="44" id="8UH-8y-M9M"/>
+                            <constraint firstItem="I2e-64-lke" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9bs-z0-wXP"/>
+                            <constraint firstItem="vpO-FF-6Sz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JnC-Vr-cHe"/>
+                            <constraint firstAttribute="trailing" secondItem="I2e-64-lke" secondAttribute="trailing" id="dRc-4P-3xV"/>
+                            <constraint firstItem="I2e-64-lke" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="quu-eN-fGX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rj7-zp-XhH"/>
+                    <connections>
+                        <outlet property="protocalLable" destination="I2e-64-lke" id="yDS-Dt-U8a"/>
+                        <outlet property="testProtocalBtn" destination="vpO-FF-6Sz" id="frY-K5-RZk"/>
+                        <outlet property="textFiled" destination="HNV-wX-6QS" id="6pr-1z-kxk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="284"/>
+        </scene>
+    </scenes>
+</document>
